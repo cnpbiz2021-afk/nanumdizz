@@ -1,0 +1,179 @@
+/* ==========================================================================
+   나눔과더함 이비인후과 - 동작구 어지럼증·이석증 전문 클리닉
+   디자인 무드: nota.uprock.pro 레퍼런스 기반 미니멀 & 프리미엄 메디컬 스타일
+   ========================================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  --color-primary: #0369a1;       /* Deep Medical Cerulean */
+  --color-primary-dark: #075985;  /* Deep Ocean Navy */
+  --color-primary-light: #e0f2fe; /* Soft Trust Sky */
+  --color-accent: #0284c7;        /* Medical Accent */
+  --color-bg-light: #fafafa;      /* Clean Minimal Neutral */
+  --color-text-dark: #0f172a;     /* Slate 900 */
+  --color-text-muted: #475569;    /* Slate 600 */
+  --color-border: #e2e8f0;        /* Slate 200 */
+}
+
+/* Base resets & typography */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--color-text-dark);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background-color: #bae6fd;
+  color: #0369a1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Typography Enhancements */
+.hero-title {
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.section-title {
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+/* Glassmorphism Header */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Minimal Editorial Card & Borders (nota.uprock.pro style) */
+.editorial-card {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  background: #ffffff;
+}
+
+.editorial-card:hover {
+  border-color: rgba(3, 105, 161, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.05);
+}
+
+/* Scroll Animation Elements */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 100ms; }
+.stagger-2 { transition-delay: 200ms; }
+.stagger-3 { transition-delay: 300ms; }
+.stagger-4 { transition-delay: 400ms; }
+
+/* Interactive symptom checker pill */
+.symptom-tab {
+  transition: all 0.2s ease;
+}
+
+.symptom-tab.active {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Accordion transition */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+}
+
+.faq-item.active .faq-content {
+  max-height: 1000px;
+  transition: max-height 0.6s ease-in-out;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Medical Accent Gradient Lines */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(226, 232, 240, 1) 20%, rgba(226, 232, 240, 1) 80%, transparent 100%);
+}
+
+/* Clean Button Styles */
+.btn-primary {
+  background-color: #0f172a;
+  color: #ffffff;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+  background-color: #0284c7;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  background-color: transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-outline:hover {
+  border-color: #0f172a;
+  background-color: #f8fafc;
+}
+
+/* Number Step Circles */
+.step-number {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

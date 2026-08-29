@@ -1,0 +1,16 @@
+{
+  "name": "나눔과더함 이비인후과 - 동작구 어지럼증·이석증 전문 클리닉",
+  "short_name": "나눔과더함이비인후과",
+  "description": "동작구 만양로 5-1 위치. 이비인후과 전문의가 진료하는 어지럼증, 이석증, 전정신경염, 메니에르병 정밀 진단 및 당일 치료 클리닉.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0369a1",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230369a1'/><path d='M35 50h30M50 35v30' stroke='white' stroke-width='10' stroke-linecap='round'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
