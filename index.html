@@ -1295,7 +1295,7 @@
               </div>
 
               <!-- Map Visual -->
-              <div class="relative w-full h-80 sm:h-96 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden flex items-center justify-center group">
+              <div id="map-visual" class="relative w-full h-80 sm:h-96 rounded-xl bg-slate-100 border border-slate-200 overflow-hidden flex items-center justify-center group">
 
                 <img src="images/map-sangdo.png" alt="나눔과더함 이비인후과 위치 지도 (서울 동작구 만양로 5-1 301호)" class="absolute inset-0 w-full h-full object-cover">
 
@@ -1321,22 +1321,6 @@
                   </div>
                 </div>
 
-              </div>
-
-              <!-- Location Quick Action Toolbar -->
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-2">
-                <a href="tel:02-6929-4565" class="flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-sky-700 transition-colors">
-                  <i data-lucide="phone" class="w-3.5 h-3.5 text-sky-400"></i>
-                  <span>02-6929-4565 전화</span>
-                </a>
-                <button onclick="copyAddress()" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-slate-300 text-slate-800 text-xs font-semibold hover:bg-slate-50 transition-colors">
-                  <i data-lucide="copy" class="w-3.5 h-3.5 text-slate-600"></i>
-                  <span>주소 복사하기</span>
-                </button>
-                <a href="https://map.naver.com/v5/search/%EB%82%98%EB%88%94%EA%B3%BC%EB%8D%94%ED%95%A8%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC" target="_blank" rel="noopener noreferrer" class="col-span-2 sm:col-span-1 flex items-center justify-center gap-2 p-3 rounded-xl border border-emerald-300 bg-emerald-50/50 text-emerald-800 text-xs font-semibold hover:bg-emerald-100 transition-colors">
-                  <i data-lucide="map" class="w-3.5 h-3.5 text-emerald-700"></i>
-                  <span>네이버 플레이스</span>
-                </a>
               </div>
 
             </div>
@@ -1566,7 +1550,7 @@
         <i data-lucide="phone" class="w-4 h-4 text-sky-400"></i>
         <span class="whitespace-nowrap">전화 문의</span>
       </a>
-      <a href="#location-section" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-700 text-white font-bold text-xs shadow-md whitespace-nowrap">
+      <a href="#map-visual" class="flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-sky-700 text-white font-bold text-xs shadow-md whitespace-nowrap">
         <i data-lucide="map-pin" class="w-4 h-4 text-sky-200"></i>
         <span class="whitespace-nowrap">오시는길 / 지도</span>
       </a>
