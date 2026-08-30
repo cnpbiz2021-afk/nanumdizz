@@ -152,9 +152,15 @@ function initSymptomChecker() {
       tabs.forEach(t => {
         t.classList.remove('active');
         t.setAttribute('aria-selected', 'false');
+        // Restore the inactive (white/light) look and re-enable its hover state
+        t.classList.add('bg-white', 'text-slate-700', 'hover:bg-slate-50');
       });
       tab.classList.add('active');
       tab.setAttribute('aria-selected', 'true');
+      // Strip the inactive-look utility classes so Tailwind's hover:bg-slate-50
+      // (which mobile browsers can get "stuck" on after a tap) can never
+      // override the active tab's dark background / white text.
+      tab.classList.remove('bg-white', 'text-slate-700', 'hover:bg-slate-50');
 
       const key = tab.getAttribute('data-symptom');
       const data = symptomData[key];
