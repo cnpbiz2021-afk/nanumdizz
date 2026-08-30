@@ -202,22 +202,46 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
-/* Mobile Drawer Menu: force solid backgrounds
-   (일부 모바일 브라우저는 backdrop-filter를 지원하지 않거나
-   Tailwind CDN 클래스가 늦게 적용되어 배경이 비쳐 보일 수 있어
-   명시적으로 불투명 배경을 고정한다) */
+/* Mobile Drawer Menu: fully self-contained layout + solid backgrounds.
+   Tailwind CDN 스크립트가 느리게 로드되거나 실행되지 않는 환경(느린 모바일
+   네트워크, 특정 인앱 브라우저 등)에서도 메뉴가 항상 화면 우측에 고정된
+   불투명 패널로 정확히 렌더링되도록, position/사이즈/배경을 Tailwind 유틸리티에
+   의존하지 않고 순수 CSS로 직접 정의한다. */
 #mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
   background-color: rgba(2, 6, 23, 0.6);
 }
 
-#mobile-menu > div {
-  background-color: #ffffff;
-  opacity: 1;
+#mobile-menu:not(.hidden) {
+  display: block;
 }
 
-@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+#mobile-menu > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 20rem;
+  padding: 1.5rem;
+  overflow-y: auto;
+  background-color: #ffffff;
+  opacity: 1;
+  box-shadow: -12px 0 40px rgba(2, 6, 23, 0.25);
+}
+
+@media (min-width: 1024px) {
   #mobile-menu {
-    background-color: rgba(2, 6, 23, 0.75);
+    display: none !important;
   }
 }
 
