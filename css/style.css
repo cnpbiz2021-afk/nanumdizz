@@ -140,10 +140,13 @@ body {
   transition: all 0.2s ease;
 }
 
-.symptom-tab.active {
-  background-color: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+.symptom-tab.active,
+.symptom-tab.active:hover,
+.symptom-tab.active:focus,
+.symptom-tab.active:active {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+  border-color: #0f172a !important;
 }
 
 /* Accordion transition */
