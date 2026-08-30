@@ -65,6 +65,13 @@ body {
   line-height: 1.25;
 }
 
+/* Symptom checker heading: force single line on all screens (no wrap),
+   font-size fluidly scales with viewport width so it never overflows on mobile */
+.symptom-checker-title {
+  white-space: nowrap;
+  font-size: clamp(0.875rem, 4.3vw, 2.25rem);
+}
+
 /* Glassmorphism Header */
 .glass-nav {
   background: rgba(255, 255, 255, 0.88);
