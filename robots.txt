@@ -18,4 +18,4 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap location
-Sitemap: https://nanumdizz.kr/sitemap.xml
+Sitemap: https://동작구어지럼증.com/sitemap.xml
